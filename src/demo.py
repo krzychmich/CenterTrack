@@ -97,12 +97,11 @@ def demo(opt):
         out.write(ret['generic'])
         if not is_video:
           cv2.imwrite('../results/demo{}.jpg'.format(cnt), ret['generic'])
-      
-      # esc to quit and finish saving video
-      if cv2.waitKey(1) == 27:
+
+      if out_name is None:
         save_and_exit(opt, out, results, out_name)
         return 
-  save_and_exit(opt, out, results)
+  save_and_exit(opt, out, results, out_name)
 
 
 def save_and_exit(opt, out=None, results=None, out_name=''):
