@@ -99,7 +99,7 @@ def demo(opt):
           cv2.imwrite('../results/demo{}.jpg'.format(cnt), ret['generic'])
 
       if out_name is None:
-        save_and_exit(opt, out, results, out_name)
+        save_and_exit(opt, out, resultsout_name)
         return 
   save_and_exit(opt, out, results, out_name)
 
